@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code... -->
+    <style>
+        .submit-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        .tos-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .form-field {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .scanner-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hosting-instructions {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- ...existing code... -->
+    <form action="/submit_registration.php" method="post">
+        <!-- The form data will be saved to the server-side script at /submit_registration.php -->
+        <div class="form-field">
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="1">Class 1</option>
+                <option value="2">Class 2</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="medium">Which Medium:</label>
+            <select id="medium" name="medium" required>
+                <option value="hindi">Hindi Medium</option>
+                <option value="english">English Medium</option>
+            </select>
+        </div>
+        <div class="tos-container">
+            <input type="checkbox" id="tos_agree" name="tos_agree" required />
+            <label for="tos_agree">I agree to all terms of service</label>
+        </div>
+        <div style="text-align: center;">
+            <button type="submit" class="submit-button">Submit Registration</button>
+        </div>
+    </form>
+    <div class="scanner-link">
+        <p>Scan the QR code to access this form:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8000/test_PQ9.html&size=150x150" alt="QR Code">
+    </div>
+    <div class="hosting-instructions">
+        <p>To host this file locally, open a terminal and run:</p>
+        <pre>cd c:\Users\106122034\Desktop\mernstack\html</pre>
+        <pre>python -m http.server</pre>
+        <p>Then open <a href="http://localhost:8000/test_PQ9.html" target="_blank">http://localhost:8000/test_PQ9.html</a> in your browser.</p>
+    </div>
+</body>
+</html>
