@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession and Settings Form</title>
+</head>
+<body>
+    <h1>Profession and Settings Form</h1>
+    <form action="server" method="POST">
+        <!-- Profession Selection -->
+        <div>
+            <label for="profession">Select Your Profession:</label>
+            <select name="profession" id="profession">
+                <option value="student">Student</option>
+                <option value="dev">Developer</option>
+                <option value="doctor">Doctor</option>
+                <option value="engineer">Engineer</option>
+                <option value="lawyer">Lawyer</option>
+                <option value="teacher">Teacher</option>
+                <option value="artist">Artist</option>
+                <option value="scientist">Scientist</option>
+                <option value="nurse">Nurse</option>
+                <option value="pilot">Pilot</option>
+                <option value="chef">Chef</option>
+            </select>
+        </div>
+
+        <!-- Settings Sliders -->
+        <fieldset>
+            <legend>Adjust Settings</legend>
+            <div>
+                <label for="volume">Volume:</label>
+                <input type="range" name="volume" id="volume" min="0" max="100" value="50">
+            </div>
+            <div>
+                <label for="brightness">Brightness:</label>
+                <input type="range" name="brightness" id="brightness" min="0" max="100" value="50">
+            </div>
+            <div>
+                <label for="contrast">Contrast:</label>
+                <input type="range" name="contrast" id="contrast" min="0" max="100" value="50">
+            </div>
+            <div>
+                <label for="hue">Hue:</label>
+                <input type="range" name="hue" id="hue" min="0" max="360" value="180">
+            </div>
+            <div>
+                <label for="saturation">Saturation:</label>
+                <input type="range" name="saturation" id="saturation" min="0" max="100" value="50">
+            </div>
+            <div>
+                <label for="sepia">Sepia:</label>
+                <input type="range" name="sepia" id="sepia" min="0" max="100" value="0">
+            </div>
+            <div>
+                <label for="blur">Blur:</label>
+                <input type="range" name="blur" id="blur" min="0" max="10" value="0">
+            </div>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
